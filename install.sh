@@ -17,5 +17,6 @@ echo "to start your new vm:"
 echo "  cd \$INSTALLATION_DIR && ./startqemu.sh"
 
 clear
-cd \$INSTALLATION_DIR && ./startqemu.sh
+ls
+cd alpine && ./startqemu.sh
 expect -f boot.expect
