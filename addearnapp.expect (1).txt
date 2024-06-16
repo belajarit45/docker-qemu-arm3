@@ -1,0 +1,21 @@
+###############################################
+#
+# install alpine with docker in qemu x86_64
+#
+
+# Wait enough (forever) until a long-time boot
+set timeout -1
+
+expect "login:"
+send "root\r"
+
+expect "Password:"
+send "$env(ROOT_PASSWORD)\n"
+
+# add docker portainer
+
+expect "#"
+send "docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce\r"
+
+expect "#"
+send "docker ps\r"
