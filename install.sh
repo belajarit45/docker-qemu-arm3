@@ -18,5 +18,5 @@ echo "  cd \$INSTALLATION_DIR && ./startqemu.sh"
 
 clear
 ls
-cd alpine && ./startqemu.sh
+./startqemu.sh
 expect -f boot.expect
