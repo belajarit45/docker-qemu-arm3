@@ -13,5 +13,4 @@ source config.env
 
 expect -f installqemu.expect
 
-echo "to start your new vm:"
-echo "cd \$INSTALLATION_DIR && ./startqemu.sh"
+echo "Telah Berhasil Install Linux"
