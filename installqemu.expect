@@ -192,7 +192,9 @@ send "echo $qemukey >> /root/.ssh/authorized_keys\r"
 
 expect "#"
 send "poweroff\r"
-expect ":~#"
+
+expect "#"
+send "reboot\r"
 
 # back on console
-expect "$"
+
