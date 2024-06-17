@@ -1,16 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-pkg update
-pkg install -y expect curl qemu-utils qemu-common qemu-system-x86_64-headless openssh
+docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 
+docker ps
 
-if [ ! -f "config.env" ]; then
-    # get the default config file
-    cp config.sample config.env
-fi
-
-source config.env
-
-expect -f installqemu.expect
-
-echo "Telah Berhasil Install Linux"
+echo "Telah Berhasil Menambahkan Akun"
