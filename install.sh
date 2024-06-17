@@ -11,6 +11,4 @@ fi
 
 source config.env
 
-expect -f installqemu.expect
-
-echo "Telah Berhasil Install Linux"
+expect -f installqemu.expect && echo "Telah Berhasil Install Linux"
