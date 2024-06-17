@@ -6,8 +6,6 @@
 # Wait enough (forever) until a long-time boot
 set timeout -1
 
-set qemuID $spawn_id
-
 expect "login:"
 send "root\r"
 
