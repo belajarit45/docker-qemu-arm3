@@ -14,8 +14,4 @@ source config.env
 expect -f installqemu.expect
 
 echo "to start your new vm:"
-echo "  cd \$INSTALLATION_DIR && ./startqemu.sh"
-
-ls
-./startqemu.sh
-expect -f boot.expect
+echo "cd \$INSTALLATION_DIR && ./startqemu.sh"
